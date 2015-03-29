@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shopping</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<link href="../css/login.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.user {
+    line-height:20px;
+    color:#F00;
+    text-align:right;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+  <div class="left_box" style="width:100%;">
+    <table width="100%" height="75" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="244" rowspan="2"><a href="/"><img src="/images/indexImage/logo.gif" border="0" width="244" height="36" /></a></td>
+        <td width="100" align="right"><div id="user" class="user"></div></td>
+        <td width="230" align="right" style="text-align:left;"><a href="safetyExit"><font color="#FF0000">Log out</font></a></td>
+        <td width="335" align="right"> <a href="memberInfoUpdate">My account</a> | <a href="../page/ShoppingBag.jsp"><img src="../images/indexImage/cart.gif" width="19" height="16" border="0" target="cart" /> <font color="#EF7201">Cart</font></a> | <a href="../page/help.jsp">Help</a></td>
+      </tr>
+      <tr>
+        <td height="55" colspan="4" align="right"><table width="92%" border="0" align="right" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+            <tr>
+              <td class="bg_navOne" height="30" align="center" bgcolor="#FFFFFF"><a href="index.jsp">home　 </a> | <a href="#"> 　music　 </a> | <a href="#"> 　digital　</a> | <a href="#">　beauty</a>　| <a href="#">　baby</a> 　|　 <a href="#"> clothes　</a> | <a href="#"> 　furniture</a> 　|　<a href="#">　health</a></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+  </div>
+  
+  <!-----------------------------------------------导航栏------------------------------------------->
+  <table width="100%" height="40" cellpadding="0" cellspacing="0" border="0" bgcolor="#A9A09B">
+    <tr>
+      <td><div class="box bgColorOne" style="background:#4c2506;">
+          <div class="left_box"> 
+            
+            <!-- 查询商品开始 -->
+            <form action="QueryGoodsServlet" method="post" >
+              <table border="0" cellpadding="0" cellspacing="10" bgcolor="#4C2506">
+                <tr>
+                  <td width="80" align="right"><font color="#FFFFFF">search</font></td>
+                  <td width="140"><label>
+                      <select name="select">
+                        <option>----input the product name----</option>
+                      </select>
+                    </label></td>
+                  <td width="300"><label>
+                      <input name="queryGoodsName" type="text" size="40" />
+                    </label></td>
+                  <td width="200"><label>
+                      <input type="submit" name="Submit" value="submit" />
+                    </label></td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+            </form>
+            <!-- 查询商品结束 --> 
+            
+          </div>
+        </div></td>
+    </tr>
+  </table>
+  <!--空格-->
+  <table width="100%">
+    <tr>
+      <td height="5"></td>
+    </tr>
+  </table>
+  <!------------------------------------------------头部结束---------------------------------------> 
+  
+  
+  
+        <table align="center" width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="20"></td>
+  </tr>
+  <tr>
+    <td height="25"><img src="../images/loginImage/login_06.gif" width="6" height="14" alt="" /> <img src="" width="64" height="15" alt="" /></td>
+  </tr>
+  <tr>
+    <td height="1" bgcolor="#F1C7C7"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+      <tr>
+        <td width="5" height="5" align="left" valign="top" bgcolor="#F2EDEA"><img src="../images/loginImage/login_lt.gif" width="5" height="5" alt="" /></td>
+        <td bgcolor="#F2EDEA"></td>
+        <td width="5" height="5" align="right" valign="top" bgcolor="#F2EDEA"><img src="../images/loginImage/login_rt.gif" width="5" height="5" alt="" /></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td bgcolor="#F2EDEA"></td>
+        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td width="50%" align="center">
+                    
+                    
+<!-----------------------------------登陆表单开始----------------------------------->
+<%=yield  %>
+  
+  </td>
+          </tr>
+        </table>
+</td>
+        <td bgcolor="#F2EDEA"></td>
+      </tr>
+      <tr>
+        <td align="left" valign="bottom" bgcolor="#F2EDEA"><img src="../images/loginImage/login_lb.gif" width="5" height="5" alt="" /></td>
+        <td bgcolor="#F2EDEA"></td>
+        <td align="right" valign="bottom" bgcolor="#F2EDEA"><img src="../images/loginImage/login_rb.gif" width="5" height="5" alt="" /></td>
+      </tr>
+    </table> 
+</td>
+  </tr>
+</table>  
+<!------------------------------------------------尾部开始--------------------------------------->
+  <table>
+    <tr>
+      <td height="15"></td>
+    </tr>
+  </table>
+  <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+    <tr>
+      <td height="50" align="center" bgcolor="#FFFFFF"><img src="../images/indexImage/footer_09.gif" width="343" height="36" alt="" /></td>
+    </tr>
+  </table>
+  </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+

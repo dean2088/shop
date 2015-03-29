@@ -1,0 +1,47 @@
+<h1>Editing User</h1>
+
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uname %><br>
+    <%= f.text_field :uname %>
+  </div>
+  <div class="field">
+    <%= f.label :upwd %><br>
+    <%= f.text_field :upwd %>
+  </div>
+  <div class="field">
+    <%= f.label :umail %><br>
+    <%= f.text_field :umail %>
+  </div>
+  <div class="field">
+    <%= f.label :uphone %><br>
+    <%= f.text_field :uphone %>
+  </div>
+  <div class="field">
+    <%= f.label :uaddress %><br>
+    <%= f.text_field :uaddress %>
+  </div>
+  <div class="field">
+    <%= f.label :uimpower %><br>
+    <%= f.text_field :uimpower %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,101 @@
+
+
+<map name="Map" id="Map">
+<area shape="rect" coords="2,60,86,76" href="#" />
+</map>
+
+<table align="center" width="950" height="10" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20" height="60" bgcolor="#F8F5EF">&nbsp;</td>
+    <td bgcolor="#F8F5EF" class="wordStyle14">Cart:</td>
+  </tr>
+  <tr>
+    <td height="18">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<table align="center" width="950" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="18"><strong>Please check your order</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr class="word_Red">
+        <td width="25%" height="29" align="center" background="/images/indexImage/buy_14.gif">Product</td>
+        <td width="15%" align="center" background="/images/indexImage/buy_14.gif">Price</td>
+        <td width="15%" align="center" background="/images/indexImage/buy_14.gif">Qt</td>
+        <td width="15%" align="center" background="/images/indexImage/buy_14.gif">Total Prace</td>
+        <td width="15%" align="center" background="/images/indexImage/buy_14.gif">Process</td>
+      </tr>
+            <%if @ware_cart!=nil then %>
+             <% @ware_cart.each do |ware,amount|%>
+               <tr>
+                  <td height="25" align="center"><img class="photo_rim1" src="/images/goodsImage/<%=ware.wimg%>" /><div class="word_Red2"></div></td>
+                  <td height="68" align="center"><font color="red">$<%=ware.wprice%></font></td>
+                  <td height="68" align="center"><%=amount%></td>
+                  <td height="68" align="center">
+                     <div id="itemPrice">
+                       $<%=ware.wprice*amount%>
+                     </div>
+                  </td>
+                  <td align="center">
+                  <!-- 更新 -->
+                  update
+                   <br/><br/>
+                  <!-- 删除 -->
+                 <a href="/cart/deleteWare?id=<%=ware.id%>"> delete</a>
+                  </td>
+               </tr>
+               <tr>
+                 <td height="5" colspan="6"></td>
+               </tr>
+               <tr>
+                 <td colspan="6" class="xLine2">&nbsp;</td>
+               </tr>
+               <tr>
+                 <td height="5" colspan="6"></td>
+               </tr>
+               <% end %>
+          <% end %>
+    <!-- 循环结束 -->
+      <tr>
+        <td height="30" colspan="6" align="center"><table width="100%" height="70" border="0" cellpadding="0" cellspacing="1" bgcolor="#E7E6E3">
+          <tr>
+            <td align="center" bgcolor="#F8F8F8"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="30%" height="30"><a class="f" href="typeGoods">continue shopping</a>&gt;&gt; <a class="f" href="#">go to shopping system</a>&gt;&gt;</td>
+                <td width="20%" align="right"></td>
+                <td width="15%" align="right">Total Price：</td>
+                <td width="15%" align="left"><font color="#EF7512">
+                 <div id="totalPrice">
+                   $<%=@total%>
+                  </div>
+                </font>                </td>
+                <td width="10%" align="center"><label>
+                  <!-- 结算 -->          
+                  <%= link_to 'CHECK OUT', new_order_path %>
+                </label></td>
+              </tr>
+              <tr>
+                <td height="30">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td align="right" class="word_Green">
+               <a href="/cart/emptyWare"> clear cart</a>
+                </td>
+                <td align="left"></td>
+                <td class="word_Green">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        </tr>
+      
+    </table></td>
+  </tr>
+</table>
+

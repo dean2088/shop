@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uname: MyString
+  uaddress: MyString
+  upost: MyString
+  uphone: MyString
+  uhomephone: MyString
+  pirce: 1.5
+
+two:
+  uname: MyString
+  uaddress: MyString
+  upost: MyString
+  uphone: MyString
+  uhomephone: MyString
+  pirce: 1.5

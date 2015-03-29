@@ -1,0 +1,135 @@
+    <table width="750" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="370" align="left"><img src="/images/goodsImage/<%= @ware.wimg %>" alt="" class="photo_rim" /></td>
+        <td align="center"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>&nbsp;</td>
+              <td height="40" colspan="2" align="left" class="wordStyle14"><%= @ware.wname %></td>
+            </tr>
+            <tr>
+              <td height="2" colspan="3" bgcolor="#E499B1"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td width="281">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="8"><img src="/images/indexImage/show_13.gif" width="3" height="5" alt="" /></td>
+              <td width="70" height="25" align="left">price：</td>
+              <td align="left" class="word_Red1">AUD  $<%= @ware.wprice %><img src="" alt="" /></td>
+            </tr>
+            <tr>
+              
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td height="10">&nbsp;</td>
+              <td align="left">&nbsp;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td height="1" colspan="2" bgcolor="#CCCCCC"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><img src="/images/indexImage/show_13.gif" width="3" height="5" alt="" /></td>
+              <td height="25" align="left">Type：</td>
+              <td align="left"><%= @ware.wtype %></td>
+            </tr>
+            
+            <tr>
+              <td>&nbsp;</td>
+              <td height="10">&nbsp;</td>
+              <td align="left">&nbsp;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td height="1" colspan="2" bgcolor="#CCCCCC"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td height="15">&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><img src="/images/indexImage/show_13.gif" width="3" height="5" alt="" /></td>
+              <td height="35" align="left">Qt ：</td>
+              <td align="left"><label></label>
+                  <table width="50" border="0" align="left" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="30" rowspan="2" align="left"><input name="textfield" type="text" value="1" size="2" /></td>
+                      <td width="20" height="10"><img src="/images/indexImage/show_33.gif" width="9" height="8" alt="" /></td>
+                    </tr>
+                    <tr>
+                      <td height="10"><img src="/images/indexImage/show_36.gif" width="9" height="8" alt="" /></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td height="1" colspan="2" bgcolor="#CCCCCC"></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td height="25">&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td height="35" colspan="2" align="center"><table width="305" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="90" height="32" align="center" bgcolor="#E2376C"><a href="/cart/addcart?id=<%=@ware.id%>">BUY</a>　 </td>
+                    <td width="5">&nbsp;</td>
+                    <td width="100" align="center" bgcolor="#E9655F"><a href="＃" class="d">Shortlist</a></td>
+                    <td width="5">&nbsp;</td>
+                    <td width="105" align="center" bgcolor="#AC41A8"><a href="＃" class="d">Share</a></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+    <!-- 产品详细信息显示结束 -->
+    
+    <!-- 产品介绍标题样式看开始 -->
+    <table width="750" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="4">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="20" height="25" align="left"><img src="/images/indexImage/jt1.gif" width="16" height="16" /></td>
+        <td width="100" align="left"></td>
+        <td width="200">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="1" colspan="4" bgcolor="#CCCCCC"></td>
+      </tr>
+      <tr>
+        <td colspan="4" height="5"></td>
+      </tr>
+    </table>
+    <!-- 产品介绍标题样式看结束 -->
+    
+    <!-- 产品介绍开始 -->
+    <table width="750" border="0" cellspacing="5" cellpadding="0">
+      <tr>
+        <td><%= @ware.wdesc %></td>
+      </tr>
+    </table>
+    <!-- 产品介绍结束 -->
+    
+    </td>
+  </tr>
+</table>
+<%= link_to 'Back', wares_path %>

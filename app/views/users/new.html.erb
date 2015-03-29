@@ -1,0 +1,98 @@
+<%= javascript_include_tag "/js/user.js"%>
+
+<h1>Register</h1>
+
+<%= render 'form' %>
+<%= form_for(@user) do |f| %>
+<table align="center" width="800" border="0" cellspacing="5" cellpadding="0">
+  <tr>
+    <td width="34"><img src="/images/loginImage/register_03.gif" width="26" height="31" alt="" /></td>
+    <td width="751"><img src="" width="81" height="21" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="2" bgcolor="#CD3F3B"></td>
+      </tr>
+      <tr>
+        <td height="200"><table width="100%" border="0" cellpadding="0" cellspacing="1">
+          <tr >
+            <td class="leftBlank" width="140" height="30" bgcolor="#F5F5F5"  class="bk">account:</td>
+            <td class="bk leftBlank" bgcolor="#FFFFFF"><%= f.text_field :uname, :id=>"uname" %>
+                <input type="button" value="check account name" onclick="t_test()">
+            </td>
+            <td colspan="2" width="40%" class="bk redWord"  bgcolor="#FFFFFF"><div id="namewrong">*use Letters or numbers</div></td>
+          </tr>
+          <tr>
+            <td class="leftBlank" height="30" bgcolor="#F5F5F5" class="bk">password:</td>
+            <td class="bk leftBlank" bgcolor="#FFFFFF"> <%= f.text_field :upwd %></td>
+            <td colspan="2"  class="bk redWord"  bgcolor="#FFFFFF"><div id="pswdwrong">*6 to 18 Characters</div></td>
+          </tr>
+          <tr>
+            <td class="leftBlank" height="30" bgcolor="#F5F5F5" class="bk">password confirmation:</td>
+            <td class="bk leftBlank" bgcolor="#FFFFFF"><%= f.text_field :upwd_confirmation %></td>
+            <td colspan="2"  class="bk redWord"  bgcolor="#FFFFFF"><div id="rpswdwrong"></div></td>
+          </tr>
+          <tr>
+            <td class="leftBlank" height="30" bgcolor="#F5F5F5" class="bk">email:</td>
+            <td class="bk leftBlank" bgcolor="#FFFFFF"><%= f.text_field :umail %></td>
+            <td colspan="2"  class="bk redWord"  bgcolor="#FFFFFF"><div id="emailwrong">*vallid email address</div></td>
+          </tr>
+          <tr>
+            <td class="leftBlank" height="30" bgcolor="#F5F5F5" class="bk">email confirmation:</td>
+            <td class="bk leftBlank" bgcolor="#FFFFFF"><%= f.text_field :umail_confirmation %></td>
+            <td colspan="2" class="bk redWord"  bgcolor="#FFFFFF"><div id="remailwrong"></div></td>
+          </tr>
+          <tr>
+            <td class="bk leftBlank" height="30" bgcolor="#F5F5F5">&nbsp;</td>
+            <td colspan="3" class="bk leftBlank" bgcolor="#FFFFFF"><input type="reset" value="rewrite"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="1" bgcolor="#D69796"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="20" colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<!-- 椭圆边框开始 -->
+        <table class="register_bg" width="98%" border="0" cellpadding="0" cellspacing="0">
+           <tr>
+             <td width="3" height="3" align="left" valign="top" bgcolor="#D5D5D5"><img src="/images/indexImage/dyj_lt.gif" width="3" height="3" /></td>
+             <td bgcolor="#D5D5D5"></td>
+             <td width="3" height="3" align="right" valign="top" bgcolor="#D5D5D5"><img src="/images/indexImage/dyj_rt.gif" width="3" height="3" /></td>
+           </tr>
+           <tr>
+             <td bgcolor="#D5D5D5"></td>
+             <td height="73" align="center" bgcolor="#FFFFFF"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td align="left"><label>
+                   <input type="checkbox" name="checkbox" value="checkbox" />
+                 accept aggrement A,<a class="f" href="" >check aggrement.</a></label></td>
+                 <td width="100" rowspan="2">
+                   <%= f.submit %>
+                 </td>
+               </tr>
+               <tr>
+                 <td align="left"><input type="checkbox" name="checkbox2" value="checkbox" />
+accept aggrement B,<a class="f" href="WEB/page/clause.jsp" >check aggrement.</a></td>
+               </tr>
+             </table></td>
+             <td bgcolor="#D5D5D5"></td>
+           </tr>
+           <tr>
+             <td width="3" height="3" align="left" valign="bottom" bgcolor="#D5D5D5"><img src="../images/indexImage/dyj_lb.gif" width="3" height="3" /></td>
+             <td bgcolor="#D5D5D5"></td>
+             <td width="3" height="3" align="right" valign="bottom" bgcolor="#D5D5D5"><img src="../images/indexImage/dyj_rb.gif" width="3" height="3" /></td>
+           </tr>
+         </table>
+<!-- 椭圆边框结束 -->
+    </td>
+  </tr>
+</table>
+<% end %>
+<%= link_to 'Back', users_path %>

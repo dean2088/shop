@@ -1,0 +1,10 @@
+<h1>Upload</h1>
+<div>
+<%=form_tag "/wares/upload",:multipart => true do %>
+  <%= file_field_tag(:img,:size=>"40") %>
+      <%= submit_tag("Upload images") %>
+  <% end %>
+<br/><br/>
+<p><hr></p>
+<p><h3><%=notice%></h3></p>
+</div>

@@ -1,0 +1,124 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Mar 29, 2015 at 11:41 PM
+-- Server version: 5.5.25
+-- PHP Version: 5.4.4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `ruby_test_shop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uname` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uaddress` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `upost` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uphone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uhomephone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pirce` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `uname`, `uaddress`, `upost`, `uphone`, `uhomephone`, `pirce`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '33 George st', '2000', '0432231668', '96003499', NULL, '2015-03-27 03:06:00', '2015-03-27 03:06:00'),
+(2, 'admin', '11 George st', '2220', '0432231668', '39912313', 1260, '2015-03-27 03:18:50', '2015-03-27 03:18:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+INSERT INTO `schema_migrations` (`version`) VALUES
+('20150326012636'),
+('20150326054300'),
+('20150326055128'),
+('20150327020221'),
+('20150327020557');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uname` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `upwd` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `umail` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uphone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uaddress` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `uimpower` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `uname`, `upwd`, `umail`, `uphone`, `uaddress`, `uimpower`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', '0432231778', '54 George st', '1', '2015-03-26 01:34:39', '2015-03-26 01:34:39'),
+(2, 'dean', 'dean777', 'dean@gmail.com', NULL, NULL, NULL, '2015-03-26 05:25:20', '2015-03-26 05:25:20'),
+(3, 'dean4', 'dean888', 'dean444@gmail.com', NULL, NULL, NULL, '2015-03-26 22:56:24', '2015-03-26 22:56:24'),
+(4, 'tomcat', 'tomcat', 'tomcat@gmail.com', NULL, NULL, NULL, '2015-03-29 21:01:17', '2015-03-29 21:01:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wares`
+--
+
+CREATE TABLE `wares` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `wname` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `wdesc` text COLLATE utf8_unicode_ci,
+  `wtype` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `wfactory` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `wprice` float DEFAULT NULL,
+  `wimg` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `wares`
+--
+
+INSERT INTO `wares` (`id`, `wname`, `wdesc`, `wtype`, `wfactory`, `wprice`, `wimg`, `created_at`, `updated_at`) VALUES
+(1, 'ASUS notebook', 'a good notebook', 'digital', 'asus', 520, '2.jpg', '2015-03-26 06:02:33', '2015-03-26 06:15:44'),
+(2, 'mac book', 'a goood mac book', 'digital', 'apple', 980, '1022467.jpg', '2015-03-26 06:18:29', '2015-03-26 06:18:29'),
+(3, 'pig toy', 'a green and black pig toy', 'baby', 'Capcom', 30, '31113H25421.jpg', '2015-03-26 06:20:07', '2015-03-26 06:20:07'),
+(4, 'hat', 'a brown hat', 'clothes', 'nike', 10, '1.jpg', '2015-03-26 06:21:18', '2015-03-26 06:21:18'),
+(5, 'sony mobile phone', 'a phone', 'digital', 'sony', 125, 'lt_wdsj010091.jpg', '2015-03-26 06:22:28', '2015-03-26 06:26:57'),
+(6, 'watch', 'white watch', 'digital', 'rolex', 120, 'new_13.gif', '2015-03-26 06:28:42', '2015-03-26 06:29:11');

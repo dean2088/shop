@@ -1,0 +1,135 @@
+  <table width="90%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="45" align="left"><img src="" width="118" height="19" alt="" /></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#E4E4E4">
+                  <tr bgcolor="#FBFBFB">
+                    <td height="200" align="center" bgcolor="#FBFBFB">                  
+<!-----------------------------------登陆表单开始----------------------------------->
+                <form action="login" name="formOne">
+                    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                      
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td width="59" align="right">Account：</td>
+                        <td width="147" height="20"><label>
+                          <%=text_field :user, :name, :class=>:textSize %>
+                        </label></td>
+                        <td width="89" rowspan="2">
+                        <!-- 登陆按钮 -->
+                          <%=submit_tag 'login'%>
+                         </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="right">Password：</td>
+                        <td height="20"><%=password_field :user, :pass, :class=>:textSize %></td>
+                        </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td height="40">&nbsp;</td>
+                        <td align="left"><font color="red"></font></td>
+                        <td>&nbsp;</td>
+
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td height="1" colspan="2" class="login_bgXuxian"></td>
+                        </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="right">&nbsp;</td>
+                        <td height="35"><img src="../images/loginImage/login_50.gif" width="2" height="4" alt="" /> <a href="#">forget password?</a></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+             </form>
+<!-----------------------------------登陆表单结束-----------------------------------> 
+                    
+                    </td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+            <td width="14"><img src="../images/loginImage/login_19.gif" width="14" height="297" alt="" /></td>
+            <td width="50%" align="center"><table width="90%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="90" height="100"><img src="../images/loginImage/login_21.gif" width="86" height="86" alt="" /></td>
+                <td align="center"><table width="90%" border="0" cellspacing="4" cellpadding="0">
+                  <tr>
+                    <td class="word_red1" align="left">you haven't registered yet</td>
+                  </tr>
+                  <tr>
+                    <td align="left">new user <%= link_to 'register', new_user_path %></td>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+              <tr>
+                <td class="xLine2" height="1" colspan="2"></td>
+                </tr>
+              <tr>
+                <td height="10" colspan="2" align="center"></td>
+                </tr>
+              <tr>
+                <td height="60" align="center"><img src="../images/loginImage/login_41.gif" width="47" height="40" alt="" /></td>
+                <td align="center"><table width="90%" border="0" cellspacing="3" cellpadding="0">
+                  <tr>
+                    <td align="left">Cheapest price</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+              <tr>
+                <td height="55" align="center"><img src="../images/loginImage/login_53.gif" width="47" height="40" alt="" /></td>
+                <td align="center"><table width="90%" border="0" cellspacing="3" cellpadding="0">
+                  
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="left">Secure Shopping</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="55" align="center"><img src="../images/loginImage/login_55.gif" width="47" height="41" alt="" /></td>
+                <td align="center"><table width="90%" border="0" cellspacing="3" cellpadding="0">
+                  
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="left">Excellent customer service</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+  
+  
+  
+  
+  
+  <!------------------------------------------------尾部开始--------------------------------------->
+

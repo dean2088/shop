@@ -1,0 +1,6 @@
+<h1>Online Shopping System</h1>
+<p><%=link_to "User Manage", users_path %></p>
+<p><%=link_to "User Login", {:controller=>'users', :action=>'showLogin'} %></p>
+<p><%=link_to "Product Manage", wares_path %></p>
+<p><%=link_to "Order Manage", orders_path %></p>
+<p><%= link_to "Upload Image", {:controller=>'wares' , :action=>'uploadImg' } %></p>

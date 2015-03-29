@@ -1,0 +1,32 @@
+== README
+
+* Rails version: 4.2.0
+
+* System dependencies: I use the Eclipse + Aptana on the MAC computer, the database is MAMP's MySql
+
+* Configuration: change the database setting to your local database, in here, I use the mysql
+
+* Database creation: after you finished the config/database.yml, input "bin/rake db:migrate RAILS_ENV=development" 
+					in the Terminal and then use the sql.txt to upload the data
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions 1:
+	After you go to the localhost:3000, you would see the "Online Shopping System" page, then you click the "User Manage"t, It
+	would go the users page, click the "buy", Click the New User and create a user by yourself. 
+	
+	Then click the shopping image on the left top and go back to the "Online Shopping System" page, Click the product Manage,
+	go to the product manage page. Click the add a product on the bottom, add a product. Then click the shopping image return
+	to the "Online Shopping System" page
+	
+	Now you could click the Click the "product manage" again and see the product and also make a order. After you click the
+	"buy" button (in this simple project only the "buy" button is functional), it would show you the cart page, you could go
+	back to the product page by clicking the shopping image and add another product if you create more than one products. The
+	session would save the products you buy and show all the products on the cart page.
+	
+	After you click the "CHECK OUT", input you information, then you would have a order record in the system
+	
+* Deployment instructions 2:
+	This project is only for a practice, so many button is not functional, the note.txt is the Terminal code I use to 
+	create the tables and controller
+

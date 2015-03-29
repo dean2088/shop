@@ -1,0 +1,26 @@
+1.Change database
+2.rails new shop -d=mysql
+3."Gemfile": gem 'mysql2'
+4.rails generate controller home index
+5."routes.rb" root 'home#index'
+=============don't create the table===============
+6.rails generate scaffold user uname:string{30} upwd:string{30} umail:string{30} uphone:string{30} uaddress:string{30} uimpower:string{30}
+7.bin/rake db:migrate RAILS_ENV=development 
+===========================================
+8.get 'users/showLogin'
+
+
+
+
+
+
+=============================
+10.rails generate scaffold wares wname:string{30} wdesc:text wtype:string{30} wfactory:string{30} wprice:float wimg:string{30}
+11.bin/rake db:migrate RAILS_ENV=development
+
+=============================
+rails generate controller cart index
+
+=============================
+10.rails generate scaffold orders uname:string{30} uaddress:string{30} upost:string{30} uphone:string{30} uhomephone:string{30} pirce:float
+11.bin/rake db:migrate RAILS_ENV=development

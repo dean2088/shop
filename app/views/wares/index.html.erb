@@ -1,0 +1,27 @@
+
+
+<% i=0 %>
+<table style="border:solid 0px #F60" width="650">
+<tr>
+<% @wares.each do |ware| %>
+<td style="text-align: center">
+
+ <img src="/images/goodsImage/<%=ware.wimg %>" align="center" border="0" width="150px">
+
+ <br/>
+<%=ware.wname%><br/>
+ $<%=ware.wprice%><br/>
+ <%= link_to 'CHECK', ware %><br/>
+ <%=link_to "Download Image", :action=>"downImg" , :filename=>"#{ware.wimg}" %>
+</td>
+<% i=i+1%>
+<%if i%3==0  then %>
+</tr>
+<% end %>
+<% end %>
+</tr>
+<tr><td></td><td></td></tr>
+</table>
+<br/>
+
+<%= link_to 'add a product', new_ware_path %>

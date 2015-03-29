@@ -1,0 +1,42 @@
+<%= form_for(@ware) do |f| %>
+  <% if @ware.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ware.errors.count, "error") %> prohibited this ware from being saved:</h2>
+
+      <ul>
+      <% @ware.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wname, 'Name' %><br>
+    <%= f.text_field :wname %>
+  </div>
+  <div class="field">
+    <%= f.label :wdesc, 'desciption' %><br>
+    <%= f.text_area :wdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :wtype, 'type' %><br>
+    <%= f.text_field :wtype %>
+  </div>
+  <div class="field">
+    <%= f.label :wfactory, 'factory' %><br>
+    <%= f.text_field :wfactory %>
+  </div>
+  <div class="field">
+    <%= f.label :wprice, 'price(fload)' %><br>
+    <%= f.text_field :wprice %>
+  </div>
+  <div class="field">
+    <%= f.label :wimg, 'Input the image name(you could find many images under the "public/images/goodsImage")' %><br>
+    for example:1022467.jpg<br>
+    <%= f.text_field :wimg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
